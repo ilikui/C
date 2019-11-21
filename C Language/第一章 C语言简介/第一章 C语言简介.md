@@ -30,9 +30,46 @@
 
 #### 1.3 编程开发
 
+* 编译器
 
+  ```markdown
+  GCC，GNU组织开发的开源免费的编译器
+  
+  MinGW，Windows操作系统下的GCC
+  
+  Clang，开源的BSD协议的基于LLVM的编译器
+  
+  Visual C++:: cl.exe，Microsoft VC++自带的编译器
+  ```
+
+* 集成开发环境
+
+  ```markdown
+  Code::Blocks，开源免费的C/C++ IDE
+  
+  CodeLite，开源、跨平台的C/C++集成开发环境
+  
+  OrwellDev-C++，可移植的C/C++IDE
+  
+  C-Free
+  
+  Light Table
+  
+  Visual Studio系列
+  ```
+
+  
 
 #### 1.4 第一个程序
+
+```c
+#include <stdio.h>
+int main(void)
+{
+    printf("Hello World!");
+    return 0;
+}
+```
 
 
 
