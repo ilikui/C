@@ -8,7 +8,7 @@
 
 
 
-![](https://www.likui.co/C/CLanguage/CLanguage.png)
+
 
 
 #### 第一章 C语言概述
@@ -41,6 +41,24 @@ int main(void)
     return 0;
 }
 ```
+#### 1.4 注释
+
+```c
+#include <stdio.h>
+int main(void)
+{
+    /*
+    There will be not output  Hello World!
+    */
+    //printf("Hello World!\n);
+    return 0;
+}
+```
+
+
+
+
+
 ### 第二章 算法
 
 #### 2.1 什么是算法
