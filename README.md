@@ -67,10 +67,43 @@ int main(void)
 * 基本类型
   * 标准整数类型
   * 实数浮点类型
+  
 * 枚举类型
+
 * void类型
+
+  > void 类型修饰符(type specifier)表示"没有值可以获得"。因此，不可以采用这个类型声明变量或常量。
+
+  * void用于函数声明
+
+    > void类型表达式指的是没有值的表达式。
+    >
+    > void 类型的表达式
+    >
+    > ```c
+    > char filrename[] = "momo.txt"
+    >  if(fopen(filename,"r") == NULL)
+    >  {
+    >      perros(filename);//void表达式
+    >  }
+    > ```
+    >
+    > 类型转换(cast)运算(void)表达式显式地将表达式的返回值丢弃
+    >
+    > ```c
+    > (void)printf("I do not need this function's return value!\n");
+    > ```
+    >
+    > 
+
+  * void类型表达式
+
+  * 指向void的指针
+
 * 派生类型
+
 * 联合类型
+
 * 函数类型
 
 
