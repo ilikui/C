@@ -2,18 +2,16 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-/*测试读进来的字符是否是介于1与5之间的数字*/
 
 #if 0
 int main(int argc, char *argv[]) {
 	
-	int c = 0;
-	printf("Please input a value: ");
-	c= getchar();
-	if(c != EOF && c>'0' && c< '6')
-	{
-		printf("The value %c is between one and five",c);
-	}
+	int a,b;
+	int * ipointer1,* ipointer2; /*声明两个指针变量*/
+	scanf("%d,%d",&a,&b);
+	ipointer1 = &a;
+	ipointer2 = &b;/*将地址赋给指针变量*/
+	printf("The number is %d,%d\n",*ipointer1,*ipointer2);
 	return 0;
 }
 #endif

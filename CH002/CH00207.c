@@ -2,18 +2,19 @@
 #include <stdlib.h>
 
 /* run this program using the console pauser or add your own getch, system("pause") or input loop */
-/*测试读进来的字符是否是介于1与5之间的数字*/
 
 #if 0
 int main(int argc, char *argv[]) {
 	
-	int c = 0;
-	printf("Please input a value: ");
-	c= getchar();
-	if(c != EOF && c>'0' && c< '6')
+	int price[6] = {1,2,3,4,5,6};
+	int num[6]
+	int i = 0;
+	for(i = 0;i<6;++i)
 	{
-		printf("The value %c is between one and five",c);
+		printf("%d \n",price[i]);
 	}
+	
+	
 	return 0;
 }
 #endif
