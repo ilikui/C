@@ -4,7 +4,9 @@
 
 ![](Image/ABasic/bing_bunny.jpg)
 
-
+![issure](https://img.shields.io/github/issues/ilikui/C)
+![forks](https://img.shields.io/github/forks/ilikui/C)
+![starts](https://img.shields.io/github/stars/ilikui/C)
 
 ---
 
