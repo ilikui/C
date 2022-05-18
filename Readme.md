@@ -9,7 +9,7 @@
 ![starts](https://img.shields.io/github/stars/ilikui/C)
 
 
-> 文档链接  😀 [链接](www.likui.info/C)
+> 文档链接  😀 `www.likui.info/C`
 ---
 
 
