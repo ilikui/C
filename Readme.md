@@ -2,7 +2,7 @@
 
 
 
-![](E:\GitHub\C\Image\ABasic\bing_bunny.jpg)
+![](Image/ABasic/bing_bunny.jpg)
 
 
 
