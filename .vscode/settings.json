@@ -6,6 +6,7 @@
         "string.h": "c",
         "stdlib.h": "c",
         "stddef.h": "c",
-        "limits.h": "c"
+        "limits.h": "c",
+        "stdio.h": "c"
     }
 }
