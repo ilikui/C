@@ -1,3 +1,7 @@
+
+Beep: 
+	gcc Beep.c -o Beep
+	
 princhar: 
 	gcc princhar.c -o princhar
 
