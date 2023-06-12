@@ -1,6 +1,6 @@
 Hello:
-	gcc Hello.c -o Hello
+	gcc Test.c -o Test
 
 
 clean:
-	del *.exe
+	del  *.exe
