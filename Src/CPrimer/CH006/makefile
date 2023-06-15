@@ -1,3 +1,11 @@
+
+# 逗号运算符的使用
+
+
+postage:
+	gcc postage.c -o postage
+	
+
 cmpflt:
 	gcc cmpflt.c -o cmpflt
 
