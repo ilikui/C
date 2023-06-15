@@ -1,3 +1,9 @@
+cmpflt:
+	gcc cmpflt.c -o cmpflt
+
+while1:
+	gcc while1.c -o while1
+
 testscandf:
 	gcc testscanf.c -o  testscanf
 
