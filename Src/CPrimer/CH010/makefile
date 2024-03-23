@@ -1,5 +1,5 @@
-rain: rain
-	gcc rain.c -o rain
+designate: designate
+	gcc designate.c -o designate
 
 clean:
 	del *.exe
