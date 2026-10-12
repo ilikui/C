@@ -1,0 +1,41 @@
+# Reusable GNU Make template for a directory of C source files.
+.DEFAULT_GOAL := all
+
+CC = gcc.exe
+CFLAGS ?= -Wall -Wextra -g
+CPPFLAGS ?=
+LDFLAGS ?=
+LDLIBS ?=
+
+# DIR may be overridden, for example: make DIR=Src/CPrimer/CH003
+DIR ?= $(patsubst %/,%,$(dir $(lastword $(MAKEFILE_LIST))))
+APP ?= $(basename $(notdir $(ENTRY))).exe
+TARGET ?= $(DIR)/$(APP)
+
+# One executable has one entry point. Set ENTRY or SRCS for other layouts.
+ENTRY ?= lethead2.c
+SRCS ?= $(DIR)/$(ENTRY)
+OBJS := $(SRCS:.c=.o)
+DEPS := $(OBJS:.o=.d)
+INCLUDE_DIRS ?= $(DIR)
+INCLUDE_FLAGS := $(addprefix -I,$(INCLUDE_DIRS))
+
+.PHONY: all run clean
+all: $(TARGET)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) $(LDFLAGS) -o "$@" $(OBJS) $(LDLIBS)
+
+%.o: %.c
+	$(CC) $(CPPFLAGS) $(INCLUDE_FLAGS) $(CFLAGS) -MMD -MP -c "$<" -o "$@"
+
+run: $(TARGET)
+	"$(TARGET)"
+
+-include $(DEPS)
+
+# This template is intended for Windows GNU Make (cmd.exe recipes).
+clean:
+	@if exist "$(DIR)\*.o" del /q "$(DIR)\*.o"
+	@if exist "$(DIR)\*.d" del /q "$(DIR)\*.d"
+	@if exist "$(TARGET)" del /q "$(TARGET)"
