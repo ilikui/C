@@ -82,7 +82,7 @@
 
 ## 推荐资料
 
-- **标准与参考：** [cppreference C 语言参考](https://en.cppreference.com/w/c)
+- **标准与参考：** [cppreference C 语言参考](https://zh.cppreference.com/c)
 - **书籍：**《C 程序设计语言》（K&R，适合建立经典模型）；《C Primer Plus》（适合系统入门）
 - **练习：** 将仓库中的示例按主题重做；为每个练习添加输入边界与错误路径。
 - **注意：** 以 C11/C17 的常见实践为学习基线，遇到编译器扩展或旧式写法时，注明其可移植性。
