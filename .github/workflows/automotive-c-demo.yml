@@ -1,0 +1,37 @@
+name: Automotive C Demo
+
+on:
+  push:
+    paths:
+      - "examples/automotive_c_demo/**"
+      - ".github/workflows/automotive-c-demo.yml"
+  pull_request:
+    paths:
+      - "examples/automotive_c_demo/**"
+      - ".github/workflows/automotive-c-demo.yml"
+  workflow_dispatch:
+
+jobs:
+  make-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples/automotive_c_demo
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build and test with Make
+        run: make clean test
+
+  cmake-test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: examples/automotive_c_demo
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S . -B build-cmake
+      - name: Build
+        run: cmake --build build-cmake --parallel
+      - name: Test
+        run: ctest --test-dir build-cmake --output-on-failure
