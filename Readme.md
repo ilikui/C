@@ -137,6 +137,46 @@ mindmap
       汽车电子
 ```
 
+## C 语言从入门到精通：课程体系与学习地图
+
+这套课程按“先能写、再写对、最后写好”的顺序组织。建议以本仓库的 [12 周学习计划](STUDY_PLAN.md) 为主线，配合下面的外部优质资源补足课程、练习和项目视角。外部项目是学习入口，不代表本仓库已经 vendoring 或复制了其全部内容。
+
+```mermaid
+flowchart TD
+    A["阶段 0：工具链与程序运行"] --> B["阶段 1：语法、表达式与控制流"]
+    B --> C["阶段 2：函数、数组与字符串"]
+    C --> D["阶段 3：指针、结构体与内存"]
+    D --> E["阶段 4：文件、标准库与数据结构"]
+    E --> F["阶段 5：调试、测试与构建"]
+    F --> G["阶段 6：算法与系统编程"]
+    G --> H["阶段 7：嵌入式 C 与工程项目"]
+    H --> I["阶段 8：阅读成熟开源项目"]
+```
+
+| 课程阶段 | 核心课程内容 | 推荐学习资料 | 实践交付物 / 通关标准 |
+| --- | --- | --- | --- |
+| **0 · 开发环境** | GCC/Clang、编辑器、预处理/编译/汇编/链接、命令行、调试符号 | [CS50](https://cs50.harvard.edu/x/)、[C-from-Scratch](https://github.com/theokwebb/C-from-Scratch) | 编译并运行 Hello World；能解释编译错误与链接错误的区别 |
+| **1 · 语法入门** | 基本类型、变量、常量、运算符、类型转换、分支、循环、输入输出 | [learn-c.org](https://www.learn-c.org/)、[Beej's C Guide](https://beej.us/guide/bgc/) | 温度转换、猜数字、菜单计算器；掌握基本控制流 |
+| **2 · 函数与数据组织** | 函数声明/定义、参数传递、作用域、递归、数组、C 字符串 | [K&R 练习索引](https://github.com/caisah/K-and-R-exercises-and-examples)、[Exercism C](https://github.com/exercism/c) | 字符串反转、词频统计、数组排序；为函数编写边界测试 |
+| **3 · 指针与内存** | 地址与解引用、数组/指针关系、指针运算、结构体、枚举、动态内存、对象生命周期 | [C-from-Scratch](https://github.com/theokwebb/C-from-Scratch)、[Beej's C Guide](https://beej.us/guide/bgc/) | 实现动态字符串或动态数组；解释空指针、悬空指针、越界和内存泄漏 |
+| **4 · 标准库与文件** | stdio、字符串处理、整数/字符转换、文件 I/O、命令行参数、错误处理 | [cppreference · C](https://en.cppreference.com/w/c)、[K&R 练习](https://github.com/caisah/K-and-R-exercises-and-examples) | 文本统计工具、CSV 读取器；检查文件打开、读写和关闭失败路径 |
+| **5 · 数据结构与算法** | 链表、栈、队列、哈希表、排序、查找、复杂度与边界条件 | [TheAlgorithms/C](https://github.com/TheAlgorithms/C)、[Exercism C](https://github.com/exercism/c) | 独立实现并测试至少 3 种数据结构与 3 种算法 |
+| **6 · 工程化开发** | 头文件与源文件分层、模块接口、Makefile/CMake、Git、调试器、单元测试、静态分析、Sanitizers | [project-based-tutorials-in-c](https://github.com/7etsuo/project-based-tutorials-in-c)、[SystemProgramming](https://github.com/angrave/SystemProgramming) | 将练习重构为多文件项目；提供一键构建和测试说明 |
+| **7 · 系统编程** | 进程、文件描述符、信号、管道、线程、同步、网络基础（按平台选择） | [SystemProgramming](https://github.com/angrave/SystemProgramming)、[Beej's Network Guide](https://beej.us/guide/bgnet/) | 完成一个命令行工具或简单客户端/服务端；明确 POSIX 与 ISO C 的边界 |
+| **8 · 嵌入式与汽车电子** | 位操作、寄存器抽象、状态机、定点数、驱动接口、Mock/Fake、故障处理 | [本仓库 Automotive C Demo](examples/automotive_c_demo/README.md)、[FreeRTOS-Kernel](https://github.com/FreeRTOS/FreeRTOS-Kernel)、[Zephyr](https://github.com/zephyrproject-rtos/zephyr) | 完成可在主机测试的传感器服务模块；区分主机测试与目标板验证 |
+| **9 · 阅读与精进** | 代码导航、模块边界、内存模型、性能分析、可移植性、代码审查 | [SQLite](https://github.com/sqlite/sqlite)、[Redis](https://github.com/redis/redis)、[musl](https://git.musl-libc.org/cgit/musl/)、[Linux](https://github.com/torvalds/linux) | 选定一个小功能追踪调用链、测试和错误路径，提交一份源码阅读笔记 |
+
+### 建议的课程节奏
+
+- **第 1–2 周：** 完成阶段 0–1，重点是每天动手编译，不只看视频。
+- **第 3–4 周：** 完成阶段 2，练习函数拆分、数组与字符串处理。
+- **第 5–6 周：** 集中攻克阶段 3，画出内存示意图，并使用调试器观察地址与变量生命周期。
+- **第 7–8 周：** 完成阶段 4–5，构建文本工具和基础数据结构。
+- **第 9–10 周：** 完成阶段 6–7，练习构建、测试、调试和系统接口。
+- **第 11–12 周：** 完成阶段 8–9，交付一个有 README、构建命令、测试与复盘的项目。
+
+**通关原则：** 每个阶段至少完成一个可运行项目；代码应在严格警告选项下编译，并覆盖正常、边界和错误输入。学习时优先理解标准语义，不要把某个编译器或平台的偶然行为当成 C 语言保证。
+
 ## GitHub 优质学习资源精选
 
 以下资源按学习目的整理，优先选择具有明确内容定位、可长期参考或便于动手练习的项目。外部仓库的内容、许可和维护状态可能变化，使用前请查看各项目的 README、LICENSE 与最新提交。
